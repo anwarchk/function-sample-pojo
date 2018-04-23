@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.example;
 
 import org.springframework.boot.SpringApplication;
@@ -36,10 +37,10 @@ public class SampleApplication {
         return value -> value.toUpperCase();
     }
 
-//    @Bean
-//    public Supplier<Flux<Foo>> words() {
-//        return () -> Flux.fromArray(new Foo[]{new Foo("foo"), new Foo("bar")}).log();
-//    }
+    @Bean
+    public Supplier<Flux<Foo>> words() {
+        return () -> Flux.fromArray(new Foo[]{new Foo("foo"), new Foo("bar")}).log();
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(SampleApplication.class, args);

@@ -22,15 +22,13 @@ import reactor.core.publisher.Flux;
 
 import java.util.function.Function;
 
-/**
- * @author Dave Syer
- */
-//@Configuration
+
+@Configuration
 public class LowercaseConfiguration {
 
-//    @Bean
-//    public Function<Flux<Foo>, Flux<Bar>> lowercase() {
-//        return flux -> flux.log().map(value -> Bar.valueOf(value.lowercase()));
-//    }
+    @Bean
+    public Function<Flux<Foo>, Flux<Bar>> lowercase() {
+        return flux -> flux.log().map(value -> Bar.valueOf(value.lowercase()));
+    }
 
 }
