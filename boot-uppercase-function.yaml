@@ -1,0 +1,10 @@
+---
+apiVersion: projectriff.io/v1alpha1
+kind: Function
+metadata:
+  name: boot-uppercase
+spec:
+  container:
+    image: achirakkattil/boot-uppercase:0.0.1
+  input: uppercase
+  protocol: grpc
